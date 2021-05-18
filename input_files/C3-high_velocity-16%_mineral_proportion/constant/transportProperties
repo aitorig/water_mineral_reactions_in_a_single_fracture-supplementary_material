@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+transportModel  Newtonian;
+
+nu              nu [0 2 -1 0 0 0 0] 1E-6;
+mu              mu [0 2 -1 0 0 0 0] 1E-3;
+k0              k0 [0 2 0 0 0 0 0] 1.0E-7; //1.0E-7
+min_k           min_k [0 -2 0 0 0 0 0] 1E12;
+rho_f           rho_f [0 0 0 0 0 0 0] 5.55E4;
+rho_s           rho_s [0 0 0 0 0 0 0] 2.71E4;
+V_m             V_m [0 0 0 0 0 0 0] 36.9E-6;
+V_water         V_water [0 0 0 0 0 0 0] 18E-6;
+k_chem          k_chem [0 0 0 0 0 0 0] 8.9E-1; //Down from 8.9E-1
+C_eq          	C_eq [0 0 0 0 0 0 0] 1.0E-4;
+gamma_chem      gamma_chem [0 1 -1 0 0 0 0] 1.0E-3; // Multiplied by a factor of 100 due to molar mass and T in mol/L
+alphaEff		alphaEff [0 2 -1 0 0 0 0] 1e-10; // Down from 1e-9
+mineps		    mineps [0 0 0 0 0 0 0] 2.5E-2; //1e-02;
+Pr              [0 0 0 0 0 0 0] 1.0;
+Prt             [0 0 0 0 0 0 0] 1.0;
+// ************************************************************************* //

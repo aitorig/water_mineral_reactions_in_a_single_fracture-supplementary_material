@@ -1,0 +1,49 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7  
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+defaultFieldValues
+(
+    volScalarFieldValue eps 1
+);
+
+regions
+(
+    // Set cell values
+    // (does zerogradient on boundaries)
+    cylinderToCell
+    {
+		p1 (3.5E-2 3.5E-2 10.0); p2 (3.5E-2 3.5E-2 -10.0); radius 5E-3;
+
+        fieldValues
+        (
+            volScalarFieldValue eps 1.0E-2 // This should be the mineral porosity
+        );
+    }
+	
+	    cylinderToCell
+    {
+		p1 (7.5E-2 7.5E-2 10.0); p2 (7.5E-2 7.5E-2 -10.0); radius 5E-3;
+
+        fieldValues
+        (
+            volScalarFieldValue eps 1.0E-2 // This should be the mineral porosity
+        );
+    }
+	
+	
+);
+
+// ************************************************************************* //
