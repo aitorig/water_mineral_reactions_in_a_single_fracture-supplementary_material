@@ -1,0 +1,67 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7  
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+        name    west;
+        type    faceSet;
+        action  new;
+        source  normalToFace;
+        sourceInfo
+        {
+            normal (-1 0 0);
+			cos 0.00000001;
+        }
+    }
+	
+    {
+        name    east;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+            box (0.1 0.0 -100)(0.1 0.1 100);
+        }
+    }
+	
+    {
+        name    north;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+            box (0.0 0.1 -100)(0.1 0.1 100);
+        }
+    }
+	
+    {
+        name    south;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+            box (0.1 0.0 -100)(0.1 0. 100);
+        }
+    }
+	
+);
+
+// ************************************************************************* //
