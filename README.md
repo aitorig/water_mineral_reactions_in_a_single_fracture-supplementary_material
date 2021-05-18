@@ -1,5 +1,5 @@
 # Introduction
-This repository contains the input files used to carry out the simulation cases for the `Water-mineral reactions in a single fracture:consequences for contaminant uptake by matrix diffusion` paper
+This repository contains the input files used to carry out the simulation cases for the `Water-mineral reactions in a single fracture:consequences for contaminant uptake by matrix diffusion` paper.
 
 # Cases
 The input files of the OpenFOAM simulations can be found inside the `input_files` folder.
