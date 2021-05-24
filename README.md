@@ -16,3 +16,4 @@ Each case can be run by executing the corresponding ``OpenFoam_run.sh`` file on 
 sh OpenFoam_run.sh
 ```
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4784090.svg)](https://doi.org/10.5281/zenodo.4784090)
